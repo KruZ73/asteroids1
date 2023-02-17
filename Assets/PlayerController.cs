@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,7 +14,7 @@ public class PlayerController : MonoBehaviour
     //mnoznik przyspieszenia
     public float enginePower = 10;
 
-    public float gyroPower = 3;
+    public float gyroPower = 10;
 
 
     private CameraScript cs;
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb= GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         cs = Camera.main.transform.GetComponent<CameraScript>();
 
         input = Vector2.zero;
@@ -97,5 +98,14 @@ public class PlayerController : MonoBehaviour
                                                         ForceMode.VelocityChange);
 
         Destroy(leftBullet, 5);
+
+
+
+        GameObject rightBullet = Instantiate(bulletPrefab, gunRight.position,
+                                                        Quaternion.identity);
+        rightBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed,
+                                                        ForceMode.VelocityChange);
+
+        Destroy(rightBullet, 5);
     }
 }
