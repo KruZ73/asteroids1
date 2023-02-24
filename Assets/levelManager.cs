@@ -14,6 +14,8 @@ public class levelManager : MonoBehaviour
 
     public GameObject asteroidPrefab;
 
+    public GameObject gameOverScreen;
+
 
 
 
@@ -21,6 +23,7 @@ public class levelManager : MonoBehaviour
     void Start()
     {
         cs = Camera.main.GetComponent<CameraScript>();
+        Time.timeScale = 1.0f;
 
     }
 
@@ -84,5 +87,12 @@ public class levelManager : MonoBehaviour
                 break;
         }
         return randomSpawnLocation;
+    }
+
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        gameOverScreen.SetActive(true);
     }
 }
