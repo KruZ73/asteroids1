@@ -238,13 +238,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 5b7e1ba261539164989238a0cdfb5dbc, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 7565993172333387285, guid: 7e91acc6c6a81eb4abbd1f8d3cbfe163, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 5
   asteroidPrefab: {fileID: 3824657511114343604, guid: 9d8eed4dac3f33340acbab7161b61f50, type: 3}
-  gameOverScreen: {fileID: 0}
+  gameOverScreen: {fileID: 1438933643}
 --- !u!4 &1014496989
 Transform:
   m_ObjectHideFlags: 0
@@ -729,7 +729,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1242977457
 GameObject:
@@ -742,6 +742,7 @@ GameObject:
   - component: {fileID: 1242977458}
   - component: {fileID: 1242977459}
   - component: {fileID: 1242977460}
+  - component: {fileID: 1242977461}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -796,11 +797,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enginePower: 10
-  gyroPower: 2
+  gyroPower: 4
   bulletPrefab: {fileID: 1362374546272207800, guid: 3a0aba4672838cb4b8fcd65a3b2380c7, type: 3}
   gunLeft: {fileID: 0}
   gunRight: {fileID: 0}
-  bulletSpeed: 5
+  bulletSpeed: 10
+--- !u!135 &1242977461
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242977457}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1262401685
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,13 +899,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 5b7e1ba261539164989238a0cdfb5dbc, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 7565993172333387285, guid: 7e91acc6c6a81eb4abbd1f8d3cbfe163, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1302,7 +1316,7 @@ RectTransform:
   - {fileID: 571360636}
   - {fileID: 1262401686}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1445,7 +1459,7 @@ GameObject:
   - component: {fileID: 6199754283098217590}
   m_Layer: 0
   m_Name: SpaceshipDiffuse
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
