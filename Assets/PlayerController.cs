@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     //mnoznik przyspieszenia
     public float enginePower = 10;
 
-    public float gyroPower = 10;
+    public float gyroPower = 2;
 
 
     private CameraScript cs;
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public Transform gunLeft, gunRight;
 
 
-    public float bulletSpeed = 30;
+    public float bulletSpeed = 200;
 
     // Start is called before the first frame update
     void Start()

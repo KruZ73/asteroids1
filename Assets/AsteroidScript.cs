@@ -12,7 +12,7 @@ public class AsteroidScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody>();
         Vector3 movementVector = player.transform.position - transform.position;
-        movementVector= movementVector.normalized * 10;
+        movementVector= movementVector.normalized * 7;
         rb.AddForce(movementVector, ForceMode.VelocityChange);
         rb.AddTorque(new Vector3(Random.Range(0, 90), Random.Range(0, 90), Random.Range(0, 90)));
 
